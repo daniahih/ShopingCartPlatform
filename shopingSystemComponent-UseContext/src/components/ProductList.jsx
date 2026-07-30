@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard";
 
-function ProductList({ products, onAddToCart }) {
+function ProductList({ products }) {
   return (
     <section className="products-section">
       <div className="section-heading">
@@ -14,13 +14,7 @@ function ProductList({ products, onAddToCart }) {
 
       <div className="products-grid">
         {products.map((product) => {
-          return (
-            <ProductCard
-              key={product.id}
-              product={product}
-              onAddToCart={onAddToCart}
-            />
-          );
+          return <ProductCard key={product.id} product={product} />;
         })}
       </div>
     </section>

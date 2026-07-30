@@ -1,4 +1,7 @@
-function Cart({ cart, onRemoveFromCart }) {
+import { useCart } from "../context/CartContext";
+
+function Cart() {
+  const { cart, onRemoveFromCart } = useCart();
   return (
     <aside className="cart-panel">
       <div className="cart-title">
